@@ -163,7 +163,7 @@ main img {
     line-height: 1.4;
 }
 
-
+1201
 footer {
     background-color: #333;
     color: white;
@@ -207,7 +207,7 @@ footer {
 
     .beneficio-item img,
     .beneficio-text {
-        width: 30%;
+        width: 100%;
     }
 
     .beneficio-item img {
