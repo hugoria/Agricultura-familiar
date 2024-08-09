@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #4a724a;
+    color: white;
+    line-height: 1.6;
+}
+
+header .banner {
+    background-image: url('imagens/banner-imagem.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 200px; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    position: relative;
+}
+
+nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #3e5e3e;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+main img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+}
+
+.back-button {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #3e5e3e;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background-color: #2e4d2e;
+}
+
+.flip-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: calc(33% - 20px); 
+    height: 250px; 
+    perspective: 1000px;
+    margin: 10px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.flip-card-back {
+    background-color: #40aa63;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.flip-card-front img, .flip-card-back img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.flip-card-back h3 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.flip-card-back p {
+    font-size: 16px;
+    margin: 10px 0 0;
+    line-height: 1.4;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.beneficios-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.beneficio-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; 
+}
+
+.beneficio-item img {
+    width: 45%;
+    border-radius: 10px;
+}
+
+.beneficio-text {
+    width: 45%;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .beneficio-item {
+        flex-direction: column;
+        align-items: center; 
+        text-align: center;
+    }
+
+    .beneficio-item img,
+    .beneficio-text {
+        width: 100%;
+    }
+
+    .beneficio-item img {
+        margin-bottom: 20px;
+    }
+
+    .beneficio-text {
+        text-align: center; 
+    }
+}
+
+.feiras-section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative; 
+}
+
+.feiras-square {
+    background-color: #ffffff;
+    color: #333333;
+    border: 2px solid #333333;
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    line-height: 300px; 
+    margin: 20px auto;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative; 
+}
+
+.info-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.info-card {
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(33% - 20px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: auto; 
+}
+
+@media (max-width: 1200px) {
+    .flip-card, .info-card {
+        width: calc(50% - 20px); 
+    }
+
+    .beneficio-item img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .flip-card, .info-card {
+        width: calc(100% - 20px); 
+    }
+
+    .beneficio-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .beneficio-item img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .beneficio-text {
+        width: 100%;
+        text-align: center; 
+    }
+
+    nav {
+        position: static;
+        transform: none;
+        text-align: center;
+    }
+
+    nav ul {
+        display: block;
+    }
+
+    nav ul li {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .back-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .feiras-square {
+        width: 100%;
+        height: auto;
+        line-height: normal;
+        font-size: 18px;
+    }
+} 
